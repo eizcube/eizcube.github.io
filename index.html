@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Meta Tags -->
+<title>Eiz Cube Tattoo – Tattoo Artist Konstanz am Bodensee | Fineline & Comic</title>
+<meta name="description" content="Eiz Cube Tattoo – Dein Tattoo Artist in Konstanz am Bodensee. Spezialisiert auf Fineline und Comic Tattoos. Allrounder für alle Stile außer Realistic & Maori. Jetzt Termin anfragen.">
+<meta name="keywords" content="Tattoo Konstanz, Tattoo Artist Konstanz, Fineline Tattoo Konstanz, Comic Tattoo Konstanz, Bodensee Tattoo, Eiz Cube Tattoo, Linework Tattoo, Tattoo Studio Konstanz">
+<meta name="author" content="Eiz Cube Tattoo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eizcube.github.io">
+
+<!-- Open Graph (für Link-Vorschau bei WhatsApp, Facebook etc.) -->
+<meta property="og:title" content="Eiz Cube Tattoo – Konstanz am Bodensee">
+<meta property="og:description" content="Fineline & Comic Tattoos in Konstanz. Allrounder Tattoo Artist am Bodensee – individuelle Designs, kein Massenprodukt.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://eizcube.github.io">
+
+<!-- Google Structured Data (Schema.org) – für Google-Suchergebnis -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Eiz Cube Tattoo",
+  "description": "Tattoo Artist in Konstanz am Bodensee. Spezialisiert auf Fineline und Comic Tattoos.",
+  "url": "https://eizcube.github.io",
+  "telephone": "",
+  "email": "",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Konstanz",
+    "addressRegion": "Baden-Württemberg",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.6779,
+    "longitude": 9.1732
+  },
+  "openingHoursSpecification": [],
+  "priceRange": "€€",
+  "hasMap": "https://maps.google.com/?q=Konstanz+am+Bodensee",
+  "sameAs": []
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111111;
+    --bg3: #181818;
+    --line: rgba(255,255,255,0.07);
+    --line2: rgba(255,255,255,0.13);
+    --text: #e8e4de;
+    --muted: #555;
+    --muted2: #777;
+    --accent: #c8b89a;
+    --accent2: #a08060;
+    --white: #f0ede8;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 0.5px solid var(--line);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 26px;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--muted2);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  /* HERO */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 40px 60px;
+    position: relative;
+    border-bottom: 0.5px solid var(--line);
+    overflow: hidden;
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display);
+    font-size: clamp(120px, 22vw, 280px);
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.025);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-location {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(56px, 10vw, 120px);
+    line-height: 0.92;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+
+  .hero-title span { color: var(--accent); }
+
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    color: var(--muted2);
+    max-width: 400px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 13px 28px;
+    font-size: 12px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #0a0a0a;
+    border: none;
+  }
+
+  .btn-primary:hover { background: var(--white); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--muted2);
+    border: 0.5px solid var(--line2);
+  }
+
+  .btn-ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.3); }
+
+  /* STILE BADGES */
+  .styles-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 24px 40px;
+    border-bottom: 0.5px solid var(--line);
+    background: var(--bg2);
+  }
+
+  .style-pill {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--muted2);
+    border: 0.5px solid var(--line2);
+    padding: 6px 14px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  .style-pill.featured {
+    color: var(--accent);
+    border-color: var(--accent2);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 72px 40px;
+    border-bottom: 0.5px solid var(--line);
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--line);
+    max-width: 120px;
+  }
+
+  /* GALERIE */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 3/4;
+    background: var(--bg3);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid var(--line);
+    transition: border-color 0.2s;
+  }
+
+  .gallery-item:hover { border-color: var(--line2); }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-placeholder-inner {
+    text-align: center;
+  }
+
+  .gallery-placeholder-inner svg {
+    width: 36px;
+    height: 36px;
+    opacity: 0.15;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .gallery-placeholder-inner p {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .gallery-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--muted2);
+    background: rgba(10,10,10,0.75);
+    padding: 4px 8px;
+    border-radius: 1px;
+    text-transform: uppercase;
+  }
+
+  .gallery-note {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* ÜBER MICH */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .about-photo {
+    aspect-ratio: 3/4;
+    background: var(--bg3);
+    border-radius: 2px;
+    border: 0.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-photo-inner { text-align: center; }
+  .about-photo-inner svg { width: 48px; height: 48px; opacity: 0.12; display: block; margin: 0 auto 12px; }
+  .about-photo-inner p { font-size: 11px; color: var(--muted); letter-spacing: 0.06em; }
+
+  .about-name {
+    font-family: var(--font-display);
+    font-size: 52px;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .about-role {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .about-text {
+    font-size: 15px;
+    color: var(--muted2);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .about-tag {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--muted2);
+    border: 0.5px solid var(--line2);
+    padding: 5px 12px;
+    border-radius: 1px;
+    text-transform: uppercase;
+  }
+
+  .about-tag.featured {
+    color: var(--accent);
+    border-color: var(--accent2);
+  }
+
+  .not-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .not-tag {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: #444;
+    border: 0.5px solid #222;
+    padding: 5px 12px;
+    border-radius: 1px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+  }
+
+  .not-label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  /* KONTAKT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-info-title {
+    font-family: var(--font-display);
+    font-size: 48px;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 32px;
+  }
+
+  .info-row {
+    margin-bottom: 20px;
+  }
+
+  .info-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .info-value {
+    font-size: 14px;
+    color: var(--muted2);
+  }
+
+  .info-value a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .info-value a:hover { color: var(--white); }
+
+  .maps-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 0.5px solid var(--accent2);
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+
+  .maps-link:hover { background: var(--accent); color: #0a0a0a; }
+
+  .form-group { margin-bottom: 16px; }
+
+  .form-label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .form-input, .form-textarea, .form-select {
+    width: 100%;
+    background: var(--bg3);
+    border: 0.5px solid var(--line2);
+    border-radius: 2px;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: var(--font-body);
+    font-weight: 300;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+  }
+
+  .form-input:focus, .form-textarea:focus, .form-select:focus {
+    border-color: var(--accent2);
+  }
+
+  .form-textarea { height: 120px; resize: vertical; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .form-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: #0a0a0a;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 6px;
+  }
+
+  .form-submit:hover { background: var(--white); }
+
+  /* FOOTER */
+  footer {
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: var(--bg2);
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--muted2); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-location { animation: fadeUp 0.6s ease both; }
+  .hero-title { animation: fadeUp 0.7s 0.1s ease both; }
+  .hero-bottom { animation: fadeUp 0.7s 0.2s ease both; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { gap: 20px; }
+    .hero { padding: 0 20px 40px; min-height: 80vh; }
+    section { padding: 48px 20px; }
+    .styles-bar { padding: 16px 20px; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-photo { aspect-ratio: 1; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">EIZ<span>·</span>CUBE</a>
+  <ul class="nav-links">
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#about">Über mich</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg-text" aria-hidden="true">TATTOO</div>
+  <div class="hero-location">Tattoo Artist · Konstanz am Bodensee · Baden-Württemberg</div>
+  <h1 class="hero-title">EIZ<br><span>CUBE</span><br>TATTOO</h1>
+  <div class="hero-bottom">
+    <p class="hero-desc">Fineline & Comic – meine Leidenschaft. Aber eigentlich bin ich Allrounder. Von zart bis bold, von minimalistisch bis verspielt – jedes Motiv entsteht für dich.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Termin anfragen</a>
+      <a href="#portfolio" class="btn btn-ghost">Portfolio ansehen</a>
+    </div>
+  </div>
+</header>
+
+<!-- STILE LEISTE -->
+<div class="styles-bar" aria-label="Tattoo-Stile">
+  <span class="style-pill featured">★ Fineline</span>
+  <span class="style-pill featured">★ Comic</span>
+  <span class="style-pill">Linework</span>
+  <span class="style-pill">Blackwork</span>
+  <span class="style-pill">Geometric</span>
+  <span class="style-pill">Minimalist</span>
+  <span class="style-pill">Lettering</span>
+  <span class="style-pill">Traditional</span>
+  <span class="style-pill">Neo-Trad</span>
+  <span class="style-pill">Watercolor</span>
+  <span class="style-pill">Maori</span>
+  <span class="style-pill">Realismus</span>
+</div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-label">Portfolio</div>
+
+  <div class="gallery-grid">
+    <!-- PLATZHALTER – ersetze src="..." durch deine echten Fotos oder Google Drive Links -->
+    <div class="gallery-item">
+      <div class="gallery-placeholder-inner">
+        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
+        <p>Dein Foto hier</p>
+      </div>
+      <span class="gallery-tag">Fineline</span>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder-inner">
+        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
+        <p>Dein Foto hier</p>
+      </div>
+      <span class="gallery-tag">Comic</span>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder-inner">
+        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
+        <p>Dein Foto hier</p>
+      </div>
+      <span class="gallery-tag">Linework</span>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder-inner">
+        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
+        <p>Dein Foto hier</p>
+      </div>
+      <span class="gallery-tag">Blackwork</span>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder-inner">
+        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
+        <p>Dein Foto hier</p>
+      </div>
+      <span class="gallery-tag">Geometric</span>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder-inner">
+        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
+        <p>Dein Foto hier</p>
+      </div>
+      <span class="gallery-tag">Custom</span>
+    </div>
+  </div>
+
+  <p class="gallery-note">→ Fotos einfach austauschen: Bild-URL aus Google Fotos einfügen oder direkt hochladen</p>
+</section>
+
+<!-- ÜBER MICH -->
+<section id="about" style="background: var(--bg2);">
+  <div class="section-label">Über mich</div>
+
+  <div class="about-grid">
+    <div class="about-photo">
+      <div class="about-photo-inner">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="10" stroke="#fff" stroke-width="1"/><path d="M4 44c0-11 9-20 20-20s20 9 20 20" stroke="#fff" stroke-width="1"/></svg>
+        <p>Dein Foto hier</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="about-name">EIZ CUBE</div>
+      <div class="about-role">Tattoo Artist · Konstanz am Bodensee</div>
+
+      <p class="about-text">
+        Ich bin Eiz Cube – Tattoo Artist aus Konstanz am Bodensee. Meine Herzensthemen sind Fineline und Comic, aber ich bezeichne mich als echter Allrounder: Von feinen, zarten Linien bis zu kräftigen Maori-Mustern, von verspielten Comic-Motiven bis zu detailreichen Realismus-Tattoos – ich tatoowiere das, was zu dir passt.<br><br>
+        Kein Tattoo ist wie das andere. Jedes Motiv entsteht in enger Absprache mit dir, individuell und auf deinen Körper abgestimmt. Für mich ist Tattoowieren kein Massengeschäft – es ist Handwerk und Kunst zugleich.
+      </p>
+
+      <div class="about-tags">
+        <span class="about-tag featured">Fineline</span>
+        <span class="about-tag featured">Comic</span>
+        <span class="about-tag">Linework</span>
+        <span class="about-tag">Blackwork</span>
+        <span class="about-tag">Geometric</span>
+        <span class="about-tag">Minimalist</span>
+        <span class="about-tag">Traditional</span>
+        <span class="about-tag">Neo-Trad</span>
+        <span class="about-tag">Lettering</span>
+        <span class="about-tag">Watercolor</span>
+        <span class="about-tag">Maori</span>
+        <span class="about-tag">Realismus</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="contact">
+  <div class="section-label">Kontakt & Buchung</div>
+
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info-title">LASS UNS REDEN</div>
+
+      <div class="info-row">
+        <div class="info-label">Standort</div>
+        <div class="info-value">Konstanz am Bodensee, Baden-Württemberg</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">E-Mail</div>
+        <div class="info-value"><a href="mailto:einneuestattoo@gmail.com">einneuestattoo@gmail.com</a></div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Instagram</div>
+        <div class="info-value"><a href="https://instagram.com/eizcubetattoo" target="_blank" rel="noopener">@eizcubetattoo</a></div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Antwortzeit</div>
+        <div class="info-value">1–3 Werktage</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Hinweis</div>
+        <div class="info-value">Termine nach Absprache – keine Laufkundschaft</div>
+      </div>
+
+      <a class="maps-link" href="https://maps.google.com/?q=Konstanz+am+Bodensee" target="_blank" rel="noopener">
+        ↗ Auf Google Maps anzeigen
+      </a>
+    </div>
+
+    <div>
+      <div data-fs-success style="display:none; margin-bottom:16px; padding:14px 16px; background:rgba(30,60,30,0.4); border:0.5px solid #2a4a2a; border-radius:2px; font-size:13px; color:#7db87d; letter-spacing:0.04em;">
+        Nachricht gesendet – ich melde mich innerhalb von 1–3 Werktagen bei dir!
+      </div>
+      <div data-fs-error style="display:none; margin-bottom:16px; padding:14px 16px; background:rgba(60,20,20,0.4); border:0.5px solid #4a2a2a; border-radius:2px; font-size:13px; color:#c07070; letter-spacing:0.04em;">
+        Etwas hat nicht geklappt. Schreib mir direkt an <a href="mailto:einneuestattoo@gmail.com" style="color:#c8b89a;">einneuestattoo@gmail.com</a>
+      </div>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Dein Name</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Max Mustermann" autocomplete="name" required data-fs-field>
+            <span data-fs-error="name" style="font-size:11px;color:#c07070;"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">E-Mail</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="du@email.de" autocomplete="email" required data-fs-field>
+            <span data-fs-error="email" style="font-size:11px;color:#c07070;"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="style">Tattoo-Stil</label>
+          <select class="form-select" id="style" name="style" data-fs-field>
+            <option value="">Stil wählen ...</option>
+            <option>Fineline</option>
+            <option>Comic</option>
+            <option>Linework</option>
+            <option>Blackwork</option>
+            <option>Geometric</option>
+            <option>Minimalist</option>
+            <option>Traditional</option>
+            <option>Neo-Traditional</option>
+            <option>Lettering</option>
+            <option>Watercolor</option>
+            <option>Maori</option>
+            <option>Realismus</option>
+            <option>Bin offen für Vorschläge</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="idea">Deine Idee</label>
+          <textarea class="form-textarea" id="idea" name="idea" placeholder="Beschreibe dein Wunschmotiv, Größe, Körperstelle – so viel oder wenig wie du möchtest ..." required data-fs-field></textarea>
+          <span data-fs-error="idea" style="font-size:11px;color:#c07070;"></span>
+        </div>
+        <button class="form-submit" type="submit" data-fs-submit-btn>Anfrage senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">EIZ · CUBE</div>
+  <div class="footer-copy">© 2025 Eiz Cube Tattoo · Konstanz am Bodensee</div>
+  <div class="footer-links">
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+  </div>
+</footer>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'mzdyarnr' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
