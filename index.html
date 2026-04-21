@@ -604,6 +604,30 @@
   @media (max-width: 480px) {
     .nav-links { display: none; }
   }
+
+  .gallery-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .filter-btn {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted2);
+    background: transparent;
+    border: 0.5px solid var(--line2);
+    padding: 7px 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: all 0.2s;
+  }
+  .filter-btn:hover { color: var(--white); border-color: rgba(255,255,255,0.3); }
+  .filter-btn.active { background: var(--accent); color: #0a0a0a; border-color: var(--accent); }
+  .gallery-item { transition: opacity 0.3s, transform 0.3s; }
+  .gallery-item.hidden { display: none; }
 </style>
 </head>
 <body>
@@ -652,53 +676,31 @@
 <section id="portfolio">
   <div class="section-label">Portfolio</div>
 
-  <div class="gallery-grid">
-    <!-- PLATZHALTER – ersetze src="..." durch deine echten Fotos oder Google Drive Links -->
-    <div class="gallery-item">
-      <div class="gallery-placeholder-inner">
-        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
-        <p>Dein Foto hier</p>
-      </div>
-      <span class="gallery-tag">Fineline</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-placeholder-inner">
-        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
-        <p>Dein Foto hier</p>
-      </div>
-      <span class="gallery-tag">Comic</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-placeholder-inner">
-        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
-        <p>Dein Foto hier</p>
-      </div>
-      <span class="gallery-tag">Linework</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-placeholder-inner">
-        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
-        <p>Dein Foto hier</p>
-      </div>
-      <span class="gallery-tag">Blackwork</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-placeholder-inner">
-        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
-        <p>Dein Foto hier</p>
-      </div>
-      <span class="gallery-tag">Geometric</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-placeholder-inner">
-        <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="32" height="32" rx="2" stroke="#fff" stroke-width="1"/><path d="M2 26l9-9 6 6 5-5 12 12" stroke="#fff" stroke-width="1"/><circle cx="26" cy="10" r="4" stroke="#fff" stroke-width="1"/></svg>
-        <p>Dein Foto hier</p>
-      </div>
-      <span class="gallery-tag">Custom</span>
-    </div>
+  <div class="gallery-filter">
+    <button class="filter-btn active" onclick="filterGallery('alle', this)">Alle</button>
+    <button class="filter-btn" onclick="filterGallery('comic', this)">Comic</button>
+    <button class="filter-btn" onclick="filterGallery('fineline', this)">Fineline</button>
+    <button class="filter-btn" onclick="filterGallery('watercolor', this)">Watercolor</button>
   </div>
 
-  <p class="gallery-note">→ Fotos einfach austauschen: Bild-URL aus Google Fotos einfügen oder direkt hochladen</p>
+  <div class="gallery-grid" id="gallery">
+    <div class="gallery-item" data-kategorie="comic">
+      <img src="IMG_8835.jpg" alt="Comic Tattoo von Eiz Cube Konstanz" loading="lazy">
+      <span class="gallery-tag">Comic</span>
+    </div>
+    <div class="gallery-item" data-kategorie="comic">
+      <img src="IMG_8836.jpg" alt="Comic Tattoo von Eiz Cube Konstanz" loading="lazy">
+      <span class="gallery-tag">Comic</span>
+    </div>
+    <div class="gallery-item" data-kategorie="comic">
+      <img src="IMG_8838.jpg" alt="Comic Tattoo von Eiz Cube Konstanz" loading="lazy">
+      <span class="gallery-tag">Comic</span>
+    </div>
+    <div class="gallery-item" data-kategorie="fineline watercolor">
+      <img src="IMG_0636.JPG" alt="Watercolor Fineline Tattoo von Eiz Cube Konstanz" loading="lazy">
+      <span class="gallery-tag">Fineline · Watercolor</span>
+    </div>
+  </div>
 </section>
 
 <!-- ÜBER MICH -->
@@ -840,5 +842,19 @@
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
+
+<script>
+function filterGallery(kat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    if (kat === 'alle' || item.dataset.kategorie.includes(kat)) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+}
+</script>
 </body>
 </html>
